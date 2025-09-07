@@ -1,7 +1,4 @@
 Flask
 requests
-dlib
-opencv-python-headless
-numpy
 google-cloud-vision
 gunicorn
