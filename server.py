@@ -163,6 +163,13 @@ def analyze_image():
     except Exception as e:
         print(f"❌ เกิดข้อผิดพลาด: {e}")
         return jsonify({"error": f"เกิดข้อผิดพลาดระหว่างการวิเคราะห์: {e}"}), 500
+    
+@app.route("/", methods=["GET"])
+def health_check():
+    return jsonify({
+        "status": "ok",
+        "message": "🌈 Chariz Color API is alive and glowing!"
+    }), 200
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
